@@ -1,0 +1,27 @@
+---
+layout: default
+---
+<body>
+    <header id="cabecalho-principal">
+        <img src="{{ /assets/images/sample-logo.jpg relative_url }}">
+        <br>
+        Torne suas compras inteligentes!
+    </header>
+    <nav class="menu">
+        <ul>
+             <li><a href="#">Home</a></li>
+             <li><a href="#">Compras</a></li>
+                <ul>
+                    <li><a href="#">Lista1</a></li>
+                    <li><a href="#">Lista2</a></li>
+                </ul>
+             <li><a href="#">Produto da Semana</a></li>
+        </ul>
+    </nav>
+    <br>
+    <br>
+    <br>
+    {% for post in site.posts %}
+    <li><a href="{{ 'post.url' | relative_url }} ">{Titulo do Post}</a></li>
+    {% endfor %} 
+</body>

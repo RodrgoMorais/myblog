@@ -1,0 +1,46 @@
+:root {
+    --primary-color: #5c65cf;
+    --secondary-color: #d96fa0;
+    --primary-background: #fffaea;
+    --secondary-background: #F4A896;
+    --tertiary-background: #358597;
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    line-height: 1.5em;
+    
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: var(--primary-color);
+    background-color: var(--primary-background);
+}
+
+header#cabecalho-principal {
+    text-align: center;
+}
+
+.menu {
+    width: 100;
+    height: 50;
+    background: var(--secondary-background);
+}
+
+.menu ul {
+    list-style: none;
+    position: relative;
+    background: var(--secondary-background);
+}
+
+.menu ul li{
+    width: 200px;
+    float: left;
+    background: var(--secondary-background)
+}
+
+.menu a {
+    padding: 15px;
+    display: block;
+}
+
