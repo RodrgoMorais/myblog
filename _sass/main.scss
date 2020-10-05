@@ -2,12 +2,15 @@
     --primary-color: #5c65cf;
     --secondary-color: #d96fa0;
     --primary-background: #fffaea;
-    --secondary-background: #F4A896;
-    --tertiary-background: #358597;
+    --secondary-background: #f4a896;
+    --tertiary-background: #ffd494;
     font-family: Montserrat, sans-serif;
     font-size: 16px;
     line-height: 1.5em;
-    
+}
+
+* {
+    box-sizing: border-box;
 }
 
 body {
@@ -15,32 +18,104 @@ body {
     padding: 0;
     color: var(--primary-color);
     background-color: var(--primary-background);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
 }
 
 header#cabecalho-principal {
     text-align: center;
+    align-items: center;
+    background: var(--primary-background);
+    color: var(--primary-color);
+    height: 100px;
+    display: flex;
+    flex-direction: column;
 }
 
-.menu {
-    width: 100;
-    height: 50;
+#Logo{
+    width: 35%;
+}
+
+li, a {
+    color: var(--light);
+    text-decoration: none;
+}
+ 
+nav#navegacao-principal {
+    justify-content : center;
     background: var(--secondary-background);
+    color: var(--primary-color);
+    display: flex;
+    flex-direction: row;
+}
+ 
+nav#navegacao-principal ul {
+    margin: 0;
+    padding: 0;
+}
+ 
+nav#navegacao-principal li {
+    display: inline-block;
+    padding: 10px;
 }
 
-.menu ul {
-    list-style: none;
-    position: relative;
+article {
+    height: 70%;
+}
+ 
+main {
+    align-self: center;
+    width: calc(100% - 60px);
+    display: grid; 
+    grid-template-areas: "bx3 bx2" "bx1 bx2";
+    flex: 1;
+}
+ 
+.posts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    grid-area: bx3;
+}
+ 
+aside {
+    margin: 50px 30px;
+    height: 80%;
+    border: 15px  solid var(--secondary-background);
+    background-color: var(--tertiary-background);
+    color: var(--primary-color);
+    grid-area: bx2;
+}
+ 
+img {
+    max-width: 100%;
+    max-height:500px;
+}
+
+aside p {
+    padding: 20px;
+}
+ 
+footer#rodape-principal {
+    margin-top: 30px;
     background: var(--secondary-background);
+    color: var(--primary-color);
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.menu ul li{
-    width: 200px;
-    float: left;
-    background: var(--secondary-background)
+@media only screen and (max-width: 768px) {
+    main {
+        grid-template-columns: auto;
+        grid-template-areas: "bx3" "bx2";
+    }
 }
 
-.menu a {
-    padding: 15px;
-    display: block;
+@media only screen and (max-width: 576px) {
+    .posts {
+        grid-template-columns: auto;
+        grid-template-areas: "bx3" "bx2";
+    }
 }
-

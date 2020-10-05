@@ -17,15 +17,17 @@ layout: default
     <main>
         <section class="posts">
             <h2>
-                Espaço reservado para os post:
+                Espaço reservado para os post informativos:
             </h2>
             {% for post in site.posts %}
+                {% if {{post.category}} == "informações" %}
                 <article>
                     <a href="{{ post.url | relative_url }} "><h3> {{post.title}} </h3></a>
                     <p>
                         {{post.description}}
                     </p>
                 </article>
+                {% endif %}
             {% endfor %} 
         </section>
         <aside id="sidebar">

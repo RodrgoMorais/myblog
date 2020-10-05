@@ -1,7 +1,36 @@
 ---
 layout: default 
 ---
-{{ content }}
-<p>
-    Postado no dia {{ page.date }} na categoria {{ page.categories}}
-</p>
+<body>
+    <header id="cabecalho-principal">
+        <img src="{{ '/assets/images/sample-logo.png' | relative_url }}" id="Logo">
+        Torne suas compras inteligentes!
+    </header>
+    <nav id="navegacao-principal">
+        <ul>
+             <li><a href="{{ '/index' | relative_url }} ">Home</a></li>
+             <li><a href="{{ '/sobre-nos' | relative_url }} ">Sobre nós</a></li>  
+             <li><a href="{{ '/comidas' | relative_url }} ">Comidas</a></li>
+        </ul>
+    </nav>
+    <br>
+    <main>
+        <section>
+            <h2>
+                {{page.title}}
+            </h2>
+                <article>
+                    <p>
+                        {{ content }}
+                    </p>
+                    <p>
+                        Postado no dia {{ page.date }} na categoria {{ page.category}}
+                    </p>
+                </article>
+        </section>
+    </main>
+    <footer id="rodape-principal">
+        Contato: Merc4do@gmail.com
+    </footer>
+</body>
+
