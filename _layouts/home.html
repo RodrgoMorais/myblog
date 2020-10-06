@@ -16,9 +16,6 @@ layout: default
     <br>
     <main>
         <section class="posts">
-            <h2>
-                Espaço reservado para os post:
-            </h2>
             {% for post in site.posts %}
                 <article>
                     <a href="{{ post.url | relative_url }} "><h3> {{post.title}} </h3></a>
@@ -36,7 +33,4 @@ layout: default
             </p>
         </aside>
     </main>
-    <footer id="rodape-principal">
-        Contato: Merc4do@gmail.com
-    </footer>
 </body>

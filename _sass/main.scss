@@ -20,17 +20,18 @@ body {
     background-color: var(--primary-background);
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 100%;
 }
 
 header#cabecalho-principal {
-    text-align: center;
     align-items: center;
     background: var(--primary-background);
     color: var(--primary-color);
     height: 100px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #Logo{
@@ -68,8 +69,11 @@ main {
     align-self: center;
     width: calc(100% - 60px);
     display: grid; 
+    grid-template-columns: auto 300px;
     grid-template-areas: "bx3 bx2" "bx1 bx2";
-    flex: 1;
+    //flex: 1;
+    min-height: 100%;
+    margin-bottom: -50px;
 }
  
 .posts {
@@ -80,7 +84,7 @@ main {
  
 aside {
     margin: 50px 30px;
-    height: 80%;
+    height: 60%;
     border: 15px  solid var(--secondary-background);
     background-color: var(--tertiary-background);
     color: var(--primary-color);
@@ -96,15 +100,17 @@ aside p {
     padding: 20px;
 }
  
-footer#rodape-principal {
-    margin-top: 30px;
-    background: var(--secondary-background);
-    color: var(--primary-color);
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+// footer#rodape-principal {
+//     margin-top: 30px;
+//     background: var(--secondary-background);
+//     color: var(--primary-color);
+//     height: 60px;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     //position: sticky;
+// }
+
 
 @media only screen and (max-width: 768px) {
     main {

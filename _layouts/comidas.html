@@ -16,9 +16,6 @@ layout: default
     <br>
     <main>
         <section class="posts">
-            <h2>
-                Espaço reservado para os post sobre comida:
-            </h2>
             {% for post in site.posts %}
                 {% if post.category == "comidas" %}
                     <article>
@@ -38,7 +35,4 @@ layout: default
             </p>
         </aside>
     </main>
-    <footer id="rodape-principal">
-        Contato: Merc4do@gmail.com
-    </footer>
 </body>
